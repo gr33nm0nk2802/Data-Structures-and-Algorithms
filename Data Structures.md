@@ -36,5 +36,6 @@
     - [ ] [B Tree](https://www.geeksforgeeks.org/introduction-of-b-tree-2/)
     - [ ] [Red-Black Tree](https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/)
     - [ ] [K-Dimension Tree](https://www.geeksforgeeks.org/k-dimensional-tree/)
+  - [ ] [Self Balancing BST](https://www.geeksforgeeks.org/tag/self-balancing-bst/)
     
 # **Master these DS to call yourself a coder**
