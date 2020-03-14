@@ -6,7 +6,7 @@
 
 # Data Structures
 
-## Beginers
+## Beginners
 
   - [ ] [Array](https://www.geeksforgeeks.org/array-data-structure/)
   - [ ] [String](https://www.geeksforgeeks.org/string-data-structure/)
