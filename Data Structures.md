@@ -9,11 +9,11 @@
 ## Beginers
 
   - [ ] [Array](https://www.geeksforgeeks.org/array-data-structure/)
-  - [ ] Vectors
-  - [ ] String
-  - [ ] Linked List
-  - [ ] Stack
-  - [ ] Queue
+  - [ ] [String](https://www.geeksforgeeks.org/string-data-structure/)
+  - [ ] [Linked List](https://www.geeksforgeeks.org/data-structures/linked-list/)
+  - [ ] [Stack](https://www.geeksforgeeks.org/stack-data-structure/)
+  - [ ] [Queue](https://www.geeksforgeeks.org/queue-data-structure/)
+  - [ ] [STL](https://www.geeksforgeeks.org/the-c-standard-template-library-stl/) 
 
 ## Intermediate
   
@@ -36,4 +36,4 @@
     - [ ] Red-Black Tree
     - [ ] K-Dimension Tree
     
-# *Master these DS to call yourself a coder*
+# **Master these DS to call yourself a coder**
