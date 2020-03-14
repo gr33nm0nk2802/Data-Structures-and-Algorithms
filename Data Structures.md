@@ -8,7 +8,7 @@
 
 ## Beginers
 
-  - [ ] Array
+  - [ ] [Array](https://www.geeksforgeeks.org/array-data-structure/)
   - [ ] Vectors
   - [ ] String
   - [ ] Linked List
