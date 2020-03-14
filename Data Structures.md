@@ -8,7 +8,7 @@
 
 ## Beginners
 
-  - [ ] [Array](https://www.geeksforgeeks.org/array-data-structure/)
+  - [x] [Array](https://www.geeksforgeeks.org/array-data-structure/)
   - [ ] [String](https://www.geeksforgeeks.org/string-data-structure/)
   - [ ] [Linked List](https://www.geeksforgeeks.org/data-structures/linked-list/)
   - [ ] [Stack](https://www.geeksforgeeks.org/stack-data-structure/)
