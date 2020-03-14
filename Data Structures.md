@@ -17,23 +17,24 @@
 
 ## Intermediate
   
-  - [ ] Binary Tree
-  - [ ] Binary Search Tree
-  - [ ] Heap
-  - [ ] Hash
+  - [ ] [Binary Tree](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+  - [ ] [Binary Search Tree](https://www.geeksforgeeks.org/binary-search-tree-data-structure/)
+  - [ ] [Heap](https://www.geeksforgeeks.org/heap-data-structure/)
+  - [ ] [Hash](https://www.geeksforgeeks.org/hashing-data-structure/)
   
 ## Advanced 
 
-  - [ ] Graph
-  - [ ] Segment Tree
-  - [ ] Trie
-  - [ ] Binary Index Tree
-  - [ ] Suffix Array
-  - [ ] Suffix Tree
-    - [ ] AVL Tree
-    - [ ] Splay Tree
-    - [ ] B Tree
-    - [ ] Red-Black Tree
-    - [ ] K-Dimension Tree
+  - [ ] [Graph](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
+  - [ ] [Matrix](https://www.geeksforgeeks.org/matrix/)
+  - [ ] [Segment Tree](https://www.geeksforgeeks.org/tag/segment-tree/)
+  - [ ] [Trie](https://www.geeksforgeeks.org/tag/trie/)
+  - [ ] [Binary Index Tree](https://www.geeksforgeeks.org/tag/binary-indexed-tree/)
+  - [ ] [Suffix Array](https://www.geeksforgeeks.org/suffix-array-set-1-introduction/)
+  - [ ] [Suffix Tree](https://www.geeksforgeeks.org/tag/suffix-tree/)
+    - [ ] [AVL Tree](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)
+    - [ ] [Splay Tree](https://www.geeksforgeeks.org/splay-tree-set-1-insert/)
+    - [ ] [B Tree](https://www.geeksforgeeks.org/introduction-of-b-tree-2/)
+    - [ ] [Red-Black Tree](https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/)
+    - [ ] [K-Dimension Tree](https://www.geeksforgeeks.org/k-dimensional-tree/)
     
 # **Master these DS to call yourself a coder**
