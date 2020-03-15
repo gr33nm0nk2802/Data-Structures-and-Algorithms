@@ -30,4 +30,19 @@ int arr[6] = { 10, 20, 30, 40 }
 
 /* Compiler creates an array of size 6, initializes first 4 elements as specified by user and rest two elements as 0.
 *It is same as "int arr[] = {10, 20, 30, 40, 0, 0}" 
-*/```
+*/
+```
+
+## Advantages of an Array in C/C++:
+
+  - Random access of elements using array index.
+  - Use of less line of code as it creates a single array of multiple elements.
+  - Easy access to all the elements.
+  - Traversal through the array becomes easy using a single loop.
+  - Sorting is easy.
+
+## Disadvantages of an Array in C/C++:
+
+  - Allows a fixed number of elements to be entered which is decided at the time of declaration. Unlike a linked list, an array in C is not dynamic.
+  - Insertion and deletion of elements can be costly since the elements are needed to be managed in accordance with the new memory allocation.
+  
