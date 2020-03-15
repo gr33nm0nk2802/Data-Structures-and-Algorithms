@@ -12,7 +12,7 @@ An array is a collection of items stored at contiguous memory locations. The ide
 ## C/C++
 An array in C or C++ is a collection of items stored at contiguous memory locations and elements can be accessed randomly using indices of an array. They are used to store similar type of elements as in the data type must be the same for all elements. They can be used to store collection of primitive data types such as int, float, double, char, etc of any particular type. To add to it, an array in C or C++ can store derived data types such as the structures, pointers etc. 
 
-```(C++)
+```cpp
 // Array declaration by specifying size 
 int arr1[10]; 
 
