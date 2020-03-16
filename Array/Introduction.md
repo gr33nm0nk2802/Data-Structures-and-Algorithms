@@ -46,3 +46,20 @@ int arr[6] = { 10, 20, 30, 40 }
   - Allows a fixed number of elements to be entered which is decided at the time of declaration. Unlike a linked list, an array in C is not dynamic.
   - Insertion and deletion of elements can be costly since the elements are needed to be managed in accordance with the new memory allocation.
   
+## Facts:
+
+   - **Accessing Array Elements:** Array elements are accessed by using an integer index. Array index starts with 0 and goes till size of array minus 1.
+   - **No Index Out of bound Checking:** There is no index out of bounds checking in C/C++, but may produce unexpected output when run.
+   - In C, it is not compiler error to initialize an array with more elements than the specified size. However, The program won’t compile in C++. 
+   - The elements are stored at contiguous memory locations
+      ```
+      This means if arr[0] has address 0x7ffd636b4260
+      then address of arr[1] is 0x7ffd636b4264 i.e, address of arr[0] + sizeof(int) if the array stores integer data
+      ```
+  
+  
+  ## Difference between pointers and arrays in C?
+  
+    Answer: 
+  
+  
