@@ -58,8 +58,11 @@ int arr[6] = { 10, 20, 30, 40 }
       ```
   
   
-  ## Difference between pointers and arrays in C?
+  ### Difference between pointers and arrays in C?
   
     Answer: 
   
+  ### What is vector in C++?
+    
+    Answer:
   
