@@ -60,7 +60,7 @@ int arr[6] = { 10, 20, 30, 40 }
   
   ### Difference between pointers and arrays in C?
   
-   Answer: Pointers are used for storing address of dynamically allocated arrays and for arrays which are passed as arguments to functions. In other contexts, arrays and pointer are two different things(we can check by applying sizeof). The confusion happens because array name indicates the address of first element and arrays are always passed as pointers (even if we use square bracket)
+- Pointers are used for storing address of dynamically allocated arrays and for arrays which are passed as arguments to functions. In other contexts, arrays and pointer are two different things(we can check by applying sizeof). The confusion happens because array name indicates the address of first element and arrays are always passed as pointers (even if we use square bracket)
 
 ```c
 // 1st program to show that array and pointers are different 
@@ -86,12 +86,17 @@ OUTPUT
 Size of arr[] 24
 Size of ptr 8
 ```
+- Assigning any address to an array variable is not allowed. 
 
-Array members are accessed using pointer arithmetic.
+**Arrays and Pointers look kindoff similar bacause:** 
+
+-Array name gives address of first element of array.
+
+- Array members are accessed using pointer arithmetic.
 Compiler uses pointer arithmetic to access array element. For example, an expression like “arr[i]” is treated as * (arr + i) by the compiler. That is why the expressions like * (arr + i) work for array arr, and expressions like ptr[i] also work for pointer ptr.
 
+- Array parameters are always passed as pointers, even when we use square brackets.
 
-    
   
   ### What is vector in C++?
     
