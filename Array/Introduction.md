@@ -88,7 +88,7 @@ return 0;
     
    **The advantages of vector over normal arrays are:**
         
-   	- We do not need pass size as an extra parameter when we declare a vector i.e, Vectors support dynamic sizes (we do not have to initially specify size of a vector). 
-        - We can also resize a vector.
-        - Vectors have many in-built function like, removing an element, etc.
+   - We do not need pass size as an extra parameter when we declare a vector i.e, Vectors support dynamic sizes (we do not have to initially specify size of a vector). 
+   - We can also resize a vector.
+   - Vectors have many in-built function like, removing an element, etc.
     
