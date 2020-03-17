@@ -60,7 +60,7 @@ int arr[6] = { 10, 20, 30, 40 }
   
   ### Difference between pointers and arrays in C?
   
-     Answer: Pointers are used for storing address of dynamically allocated arrays and for arrays which are passed as arguments to functions. In other contexts, arrays and pointer are two different things(we can check by applying sizeof). The confusion happens because array name indicates the address of first element and arrays are always passed as pointers (even if we use square bracket)
+   Answer: Pointers are used for storing address of dynamically allocated arrays and for arrays which are passed as arguments to functions. In other contexts, arrays and pointer are two different things(we can check by applying sizeof). The confusion happens because array name indicates the address of first element and arrays are always passed as pointers (even if we use square bracket)
 
 ```c
 // 1st program to show that array and pointers are different 
@@ -84,11 +84,11 @@ return 0;
   
   ### What is vector in C++?
     
-    Answer: Vector in C++ is a class in STL that represents an array. 
+   Answer: Vector in C++ is a class in STL that represents an array. 
     
-      **The advantages of vector over normal arrays are:**
+   **The advantages of vector over normal arrays are:**
         
-        - We do not need pass size as an extra parameter when we declare a vector i.e, Vectors support dynamic sizes (we do not have to initially specify size of a vector). 
+   	- We do not need pass size as an extra parameter when we declare a vector i.e, Vectors support dynamic sizes (we do not have to initially specify size of a vector). 
         - We can also resize a vector.
         - Vectors have many in-built function like, removing an element, etc.
     
