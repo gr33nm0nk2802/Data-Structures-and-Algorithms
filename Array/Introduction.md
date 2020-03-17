@@ -86,6 +86,11 @@ OUTPUT
 Size of arr[] 24
 Size of ptr 8
 ```
+
+Array members are accessed using pointer arithmetic.
+Compiler uses pointer arithmetic to access array element. For example, an expression like “arr[i]” is treated as * (arr + i) by the compiler. That is why the expressions like * (arr + i) work for array arr, and expressions like ptr[i] also work for pointer ptr.
+
+
     
   
   ### What is vector in C++?
