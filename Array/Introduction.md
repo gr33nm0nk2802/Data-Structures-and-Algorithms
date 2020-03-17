@@ -1,6 +1,7 @@
 -----
 > Author : Syed Modassir Ali
 > Date : 15.03.2020
+> Title : Array
 -----
 
 # Introduction
@@ -56,7 +57,10 @@ int arr[6] = { 10, 20, 30, 40 }
       This means if arr[0] has address 0x7ffd636b4260
       then address of arr[1] is 0x7ffd636b4264 i.e, address of arr[0] + sizeof(int) if the array stores integer data
       ```
-  
+   - A character array initialized with double quoted string has last element as ‘\0’.
+   
+   - In C, it is possible to have array of all types except void and functions.
+
   
   ### Difference between pointers and arrays in C?
   
@@ -108,3 +112,5 @@ Compiler uses pointer arithmetic to access array element. For example, an expres
 - We can also resize a vector.
 - Vectors have many in-built function like, removing an element, etc.
     
+
+## JAVA
