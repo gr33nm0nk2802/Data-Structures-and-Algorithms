@@ -114,3 +114,5 @@ Compiler uses pointer arithmetic to access array element. For example, an expres
     
 
 ## JAVA
+
+## PYTHON
