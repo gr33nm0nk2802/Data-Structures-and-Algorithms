@@ -80,6 +80,12 @@ printf("Size of ptr %ld", sizeof(ptr));
 return 0; 
 } 
 ```
+
+OUTPUT
+```
+Size of arr[] 24
+Size of ptr 8
+```
     
   
   ### What is vector in C++?
