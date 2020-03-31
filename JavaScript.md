@@ -79,3 +79,31 @@ There are two parts creating the function and calling the function.
 Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
 
 Scope of variable is also important.
+Variables which are used without the var keyword are automatically created in the global scope. 
+Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
+
+In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+
+Boolean data types true / false.
+
+**Conditonal Statements**
+
+if(Condition1)
+{
+}
+else if(condition2)
+{
+}
+else
+{
+}
+
+In conditionals there is a difference between equality and strict equality.
+=== and ==
+!== and !=
+
+Logical AND && OR ||
+
+
+**SWITCH CASE**
+
