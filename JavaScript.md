@@ -283,8 +283,8 @@ radix accepts values between 2 to 36.
 
 `condition ? statement-if-true : statement-if-false;`
 
-====
-====
+-----
+-----
 
 # ES6
 
