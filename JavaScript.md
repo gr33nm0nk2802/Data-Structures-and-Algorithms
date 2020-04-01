@@ -171,3 +171,12 @@ lookup[keyN];
 ```
 
 Sometimes it is useful to check if the property of a given object exists or not. We can use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name. `.hasOwnProperty()` returns `true` or `false` if the property is found or not.
+
+
+An Object is a flexible data Structure which allows for arbitary combination of data.
+We can also create an array of objects. Object of Objects, Object of Arrays and so on...
+
+
+JSON is a related data interchange format used to store data.
+ 
+Sub properties of any object can be accessed by using sequence of `[]` and `.` dot notion.
