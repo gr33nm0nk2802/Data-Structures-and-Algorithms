@@ -86,7 +86,7 @@ In Computer Science a queue is an abstract Data Structure where items are kept i
 
 Boolean data types true / false.
 
-**Conditonal Statements**
+# **Conditonal Statements**
 
 if(Condition1)
 {
@@ -105,5 +105,68 @@ In conditionals there is a difference between equality and strict equality.
 Logical AND && OR ||
 
 
-**SWITCH CASE**
+# **SWITCH CASE**
+
+There can be multiple datatypes for case
+
+```
+switch (val) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
+
+```
+
+# **Objects**
+
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+
+There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+
+**Syntax**
+```
+var myObj = {
+  "key1": value1,
+  "key2": value 2,
+  ...
+  "keyN": value N
+};
+```
+
+Accessing 
+```
+object.property;
+object["property"];
+```
+
+Updating
+```
+object.property = new value;
+```
+
+Adding
+```
+object.newroperty = value;
+```
+
+Deleting
+```
+deleete object.property;
+```
+
+Lookup
+We can use lookup table of objects to return a specific value for an object.
+```
+lookup[keyN];
+```
 
