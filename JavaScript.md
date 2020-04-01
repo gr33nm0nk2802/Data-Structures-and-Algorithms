@@ -269,3 +269,17 @@ int fact(int n)
         return n*fact(n-1);    
 }
 ```
+
+`Math.random();`    `Math.floor();`
+`Math.floor(Math.random() * (max - min + 1)) + min`
+
+Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+
+parseInt(string, radix);
+
+radix accepts values between 2 to 36.
+
+# Ternary
+
+`condition ? statement-if-true : statement-if-false;`
+
