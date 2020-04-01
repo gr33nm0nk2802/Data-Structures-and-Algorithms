@@ -233,3 +233,36 @@ console.log(updateRecords(5439, "artist", "ABBA"));
 
 # Loops
 
+while loop
+
+```
+while(condition){
+  // body of the loop 
+}
+```
+
+for loop
+
+```
+for ([initialization]; [condition]; [final-expression])
+```
+
+Nested Loops
+
+do-While loops
+
+```
+do
+{
+  //body of the loop
+}while(condition);
+```
+
+# Recursion
+
+```
+  function recursion(n) {
+      //base case
+      return recursion; //recursive call
+  }
+```
