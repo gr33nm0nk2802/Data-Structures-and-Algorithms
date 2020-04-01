@@ -170,3 +170,4 @@ We can use lookup table of objects to return a specific value for an object.
 lookup[keyN];
 ```
 
+Sometimes it is useful to check if the property of a given object exists or not. We can use the `.hasOwnProperty(propname)` method of objects to determine if that object has the given property name. `.hasOwnProperty()` returns `true` or `false` if the property is found or not.
