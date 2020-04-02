@@ -289,3 +289,12 @@ radix accepts values between 2 to 36.
 # ES6
 
 ECMAScript is a standardized version of JavaScript with the goal of unifying the language's specifications and features. As all major browsers and JavaScript-runtimes follow this specification, the term ECMAScript is interchangeable with the term JavaScript.
+
+
+----
+
+let keyword helps us create a vraibale within the local scope and also helps us avoid multiple variable declaration.
+
+const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.
+
+
