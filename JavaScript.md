@@ -328,3 +328,32 @@ When there is no function body, and only a return value, arrow function syntax a
 const myFunc = () => "value";
 ```
 
+**SOLUTION**
+
+```
+const magic = () => {
+  "use strict";
+  return new Date();
+};
+```
+
+Just like a regular function, you can pass arguments into an arrow function.
+
+```
+// doubles input value and returns it
+const doubler = (item) => item * 2;
+
+// the same function, without the argument parentheses
+const doubler = item => item * 2;
+
+// multiplies the first input value by the second and returns it
+const multiplier = (item, multi) => item * multi;
+```
+
+In order to help us create more flexible functions, ES6 introduces default parameters for functions. This default parameter kicks in when the argument is not specified.
+```
+const increment = (number, value=1) => number + value;
+```
+
+In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+
