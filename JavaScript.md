@@ -357,3 +357,16 @@ const increment = (number, value=1) => number + value;
 
 In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
 
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+
+```
+function sum(...Args) {
+  return theArgs.reduce((previous, current) => {
+    return previous + current;
+  });
+}
+
+console.log(sum(1, 2, 3));
+// expected output: 6
+```
+
