@@ -307,6 +307,9 @@ objects (including arrays and functions) assigned to a variable using const are 
 
 To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.Once the object is frozen, you can no longer add, update, or delete properties from it. Any attempt at changing the object will be rejected without an error.
 
+
+## Arrow Function
+
 In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.
 
 ```
@@ -359,7 +362,7 @@ In order to help us create more flexible functions, ES6 introduces default param
 const increment = (number, value=1) => number + value;
 ```
 
-In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+In order to help us create more flexible functions, ES6 introduces the **rest parameter** for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
 
 The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
 
@@ -374,7 +377,7 @@ console.log(sum(1, 2, 3));
 // expected output: 6
 ```
 
-ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+ES6 introduces the **spread operator**, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
 
 The ES5 code below uses apply() to compute the maximum value in an array:
 ```
@@ -391,3 +394,29 @@ const maximus = Math.max(...arr); // returns 89
 `...arr` returns an unpacked array. In other words, it spreads the array
 However, the spread operator only works in-place, like in an argument to a function or in an array literal. 
 
+## Destructuring Assignment
+
+Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+
+The following ES5 code 
+```
+const user = { name: 'John Doe', age: 34 };
+
+const name = user.name; // name = 'John Doe'
+const age = user.age; // age = 34
+
+```
+
+can be reduced to 
+
+```
+const { name, age } = user;
+```
+
+Here, the name and age variables will be created and assigned the values of their respective values from the user object.
+
+Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+Here's how you can give new variable names in the assignment:
+```
+const { name: userName, age: userAge } = user;
+```
