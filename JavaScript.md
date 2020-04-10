@@ -125,6 +125,10 @@ switch (val) {
 
 ```
 
+```
+JSON.stringify(); // converts array to string
+```
+
 # **Objects**
 
 Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
@@ -161,7 +165,7 @@ object.newroperty = value;
 
 Deleting
 ```
-deleete object.property;
+delete object.property;
 ```
 
 Lookup
@@ -386,6 +390,4 @@ const maximus = Math.max(...arr); // returns 89
 
 `...arr` returns an unpacked array. In other words, it spreads the array
 However, the spread operator only works in-place, like in an argument to a function or in an array literal. 
-
-
 
