@@ -462,4 +462,28 @@ let a = 8, b = 6;
  [b,a] =[a,b];
 ```
 
+`Array.prototype.slice()` 
+
+* Using destructuring assignment with the rest parameter to perform an effective `Array.prototype.slice()` so that arr is a sub-array of the original array source with the first two elements omitted.
+
+
+* In some cases, you can destructure the object in a function argument itself.
+
+```
+const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+}
+```
+
+This effectively destructures the object sent into the function. This can also be done in-place:
+
+```
+const profileUpdate = ({ name, age, nationality, location }) => {
+// code to execute with these fields.
+}
+```
+
+This removes some extra lines and makes our code look neat. This has the added benefit of not having to manipulate an entire object in a function — only the fields that are needed are copied inside the function.
+
+It also helps during API calls.
 
