@@ -82,6 +82,8 @@ Scope of variable is also important.
 Variables which are used without the var keyword are automatically created in the global scope. 
 Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
 
+
+
 In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 
 Boolean data types true / false.
@@ -420,3 +422,44 @@ Here's how you can give new variable names in the assignment:
 ```
 const { name: userName, age: userAge } = user;
 ```
+We can use the same principles to destructure values from a nested objects.
+
+Example
+```
+const user = {
+  johnDoe: { 
+    age: 34,
+    email: 'johnDoe@freeCodeCamp.com'
+  }
+};
+```
+
+```
+const { johnDoe: { age: userAge, email: userEmail }} = user;
+```
+
+Assign variables from array.
+
+ES6 makes destructuring arrays as easy as destructuring objects.
+
+One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+Destructuring an array lets us do exactly that:
+
+```
+const [a, b] = [1, 2, 3, 4, 5, 6];
+console.log(a, b); // 1, 2
+```
+The variable a is assigned the first value of the array, and b is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+
+```
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c); // 1, 2, 5
+```
+
+Swapping values
+```
+let a = 8, b = 6;
+ [b,a] =[a,b];
+```
+
+
