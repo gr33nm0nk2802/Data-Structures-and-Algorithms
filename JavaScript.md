@@ -606,3 +606,31 @@ console.log(lol.writer);  // wut
 
 Notice the syntax used to invoke the getter and setter. They do not even look like functions. Getters and setters are important because they hide internal implementation details. Note: It is convention to precede the name of a private variable with an underscore (_). 
 
+In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a type of module.
+
+`<script type="module" src="index.js"></script>`
+
+A script that uses this module type can now use the import and export features.
+
+```
+export const add = (x, y) => {
+  return x + y;
+}
+```
+
+```
+const add = (x, y) => {
+  return x + y;
+}
+
+export { add };
+```
+
+import allows you to choose which parts of a file or module to load. 
+`import { add } from './math_functions.js';`
+
+importing a default export
+` export default`
+
+
+
