@@ -508,3 +508,20 @@ console.log(greeting); // prints
 
 A lot of things happened there. Firstly, the example uses backticks ( \` ), not quotes (' or "), to wrap the string. Secondly, notice that the string is multi-line, both in the code and the output. This saves inserting \n within strings. The ${variable} syntax used above is a placeholder. Basically, you won't have to use concatenation with the + operator anymore. To add variables to strings, you just drop the variable in a template string and wrap it with ${ and }. Similarly, you can include other expressions in your string literal, for example ${a + b}. This new way of creating strings gives you more flexibility to create robust strings.
 
+* ES6 adds some nice support for easily defining object literals.
+
+Consider the code:
+```
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+```
+
+This can be reduced to:
+```
+const getMousePosition = (x, y) => ({ x, y });
+```
+
+
+
