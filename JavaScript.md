@@ -376,9 +376,9 @@ ECMAScript is a standardized version of JavaScript with the goal of unifying the
 
 ----
 
-let keyword helps us create a vraibale within the local scope and also helps us avoid multiple variable declaration.
+`let` keyword helps us create a vraibale within the local scope and also helps us avoid multiple variable declaration.
 
-const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.
+`const` has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.
 
 Common convention is to name const variables with ALL CAPS.
 
@@ -387,7 +387,9 @@ objects (including arrays and functions) assigned to a variable using const are 
 To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.Once the object is frozen, you can no longer add, update, or delete properties from it. Any attempt at changing the object will be rejected without an error.
 
 
-## Arrow Function
+## Arrow Function 
+
+( Completed under functions seciton)
 
 ## Rest parameter and Spread operator
 
@@ -408,7 +410,7 @@ console.log(sum(1, 2, 3));
 
 ES6 introduces the **spread operator**, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
 
-The ES5 code below uses apply() to compute the maximum value in an array:
+The ES5 code below uses `apply()` to compute the maximum value in an array:
 ```
 var arr = [6, 89, 3, 45];
 var maximus = Math.max.apply(null, arr); // returns 89
@@ -514,8 +516,9 @@ This removes some extra lines and makes our code look neat. This has the added b
 
 It also helps during API calls.
 
+## Template literal
 
-* A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
+A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
 Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
 
 ```
@@ -535,7 +538,9 @@ console.log(greeting); // prints
 
 A lot of things happened there. Firstly, the example uses backticks ( \` ), not quotes (' or "), to wrap the string. Secondly, notice that the string is multi-line, both in the code and the output. This saves inserting \n within strings. The ${variable} syntax used above is a placeholder. Basically, you won't have to use concatenation with the + operator anymore. To add variables to strings, you just drop the variable in a template string and wrap it with ${ and }. Similarly, you can include other expressions in your string literal, for example ${a + b}. This new way of creating strings gives you more flexibility to create robust strings.
 
-* Write Concise Object Literal Declarations Using Object Property Shorthand
+## Object Literal
+
+Write Concise Object Literal Declarations Using Object Property Shorthand
 ES6 adds some nice support for easily defining object literals.
 
 Consider the code:
@@ -551,7 +556,9 @@ This can be reduced to:
 const getMousePosition = (x, y) => ({ x, y });
 ```
 
-* Write Concise Declarative Functions with ES6
+## Functions inside Objects
+
+Write Concise Declarative Functions with ES6
 
 When defining functions within objects in ES5, we have to use the keyword function as:
 
@@ -573,6 +580,8 @@ const person = {
   }
 };
 ```
+
+## Constructor and Object creation
 
 * Use class Syntax to Define a Constructor Function
 
@@ -601,12 +610,10 @@ const zeus = new SpaceShuttle('Jupiter');
 ```
 It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
 
-Note : This class is different from the one we define in python, java, etc.
+## Getters and Setters
 
-* Use getters and setters to Control Access to an Object
-
-We can obtain values from an object and set the value of a property within an object. using the getters and setters.
-
+Use getters and setters to Control Access to an Objects private data.
+We can obtain values from an object and set the value of a property within an object using the getters and setters.
 Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
 
 Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
@@ -633,12 +640,13 @@ console.log(lol.writer);  // wut
 
 Notice the syntax used to invoke the getter and setter. They do not even look like functions. Getters and setters are important because they hide internal implementation details. Note: It is convention to precede the name of a private variable with an underscore (_). 
 
+## Modules, Import and Export
+
 In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a type of module.
 
 `<script type="module" src="index.js"></script>`
 
 A script that uses this module type can now use the import and export features.
-
 ```
 export const add = (x, y) => {
   return x + y;
@@ -654,11 +662,16 @@ export { add };
 ```
 
 import allows you to choose which parts of a file or module to load. 
-`import { add } from './math_functions.js';`
+`import { add } from "./math_functions.js";`
 
-importing a default export
-` export default`
+default export
+` export default { add }`
 
+default import
+` import add from "./maths_function.js"`
+
+import all
+`import * as somefunction from "./maths_function.js"`
 
 ## Promise
 
