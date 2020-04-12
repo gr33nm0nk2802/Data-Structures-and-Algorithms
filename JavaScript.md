@@ -29,7 +29,7 @@ In JavaScript, we can store a value in a variable using the assignment operator.
 var ourVariable = 10;
 ```
 
-*ECMAS added support for let, const keyword which we shall look later.*
+**ECMAS added support for let, const keyword which we shall look later.**
 
 Undefined variables cant be used for operations. Variable names are case sensitive. We generally use camelcase as variable names.
 JavaScript variables undergoes mathematical operations like regular variables.
@@ -65,6 +65,10 @@ var popped = myArray.pop();
 `.shift()` function removes element from the first.
 
 `.unshift()` works like push function adds element to the first.
+
+```
+JSON.stringify(); // converts array to string
+```
 
 ## Objects
 
@@ -176,22 +180,27 @@ console.log(updateRecords(5439, "artist", "ABBA"));
 
 ## Conditonal Statements
 
+```
 if(Condition1)
 {
+	// code to execute
 }
 else if(condition2)
 {
+	// code to execute
 }
 else
 {
+	// code to execute
 }
+```
 
 ### Comparision Operator
 In conditionals there is a difference between equality and strict equality.
-=== and ==
-!== and !=
+`===` and `==`
+`!==` and `!=`
 
-Logical AND && OR ||
+Logical AND `&&` OR `||`
 
 ### Ternary
 
@@ -216,10 +225,6 @@ switch (val) {
     break;
 }
 
-```
-
-```
-JSON.stringify(); // converts array to string
 ```
 
 ## Loops
@@ -256,7 +261,7 @@ In JavaScript, we can divide up our code into reusable parts called functions.
 
 ```
 function functionName(){
-	/* Body of the function */
+	// Body of the function 
 }
 ```
 
