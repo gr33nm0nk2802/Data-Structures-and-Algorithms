@@ -907,12 +907,151 @@ let result = quoteSample.match(myRegex);
 console.log(result);
 ```
 
+## Match Characters that Occur One or More Times
+
+Sometimes, we need to match a character (or group of characters) that appears one or more times in a row. 
+This means it occurs at least once, and may be repeated.
+We can use the + character to check if that is the case. Remember, the character or pattern has to be present consecutively. 
+That is, the character has to repeat one after the other.
+For example, /a+/g would find one match in "abc" and return ["a"]. Because of the +, it would also find a single match in "aabc" and return ["aa"].
+
+## Match Characters that Occur Zero or More Times
+
+The character to do this is the asterisk or star: *.
+
+## Find Characters with Lazy Matching
+
+Regular expressions are by default greedy, so the match would return ["titani"]. It finds the largest sub-string possible to fit the pattern.
+However, we can use the ? character to change it to lazy matching. "titanic" matched against the adjusted regex of /t[a-z]*?i/ returns ["ti"].
+
+## Match Beginning String Patterns
+
+Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+
+```
+let firstString = "Ricky is first and can be found.";
+let firstRegex = /^Ricky/;
+firstRegex.test(firstString);
+// Returns true
+let notFirst = "You can't find Ricky now.";
+firstRegex.test(notFirst);
+// Returns false
+```
+
+## Match Ending String Patterns
+
+You can search the end of strings using the dollar sign character $ at the end of the regex.
+
+```
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding);
+// Returns true
+let noEnding = "Sometimes a story will have to end";
+storyRegex.test(noEnding);
+// Returns false
+```
+
+## Match All Letters and Numbers
+
+Use the shorthand character class \w to count the number of alphanumeric characters in various quotes and strings.
+
+`let alphabetRegexV2 = /\w/g; `
+
+## Match Everything But Letters and Numbers
+
+We can search for the opposite of the \w with \W. Note, the opposite pattern uses a capital letter. This shortcut is the same as [^A-Za-z0-9_].
+
+## Match All Number and non Numbers
+
+We can use \d to match all numbers in a regex. \D is used for non numbers.
+
+## Username check
+
+`let userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;`
+
+## Whitespaces and non whitespaces
+
+Whitespaces are checked using \s . Search for non-whitespace using \S, which is an uppercase s. 
+This pattern will not match whitespace, carriage return, tab, form feed, and new line characters. 
+We can think of it being similar to the character class [^ \r\t\f\n\v].
+
+## Specify Upper and Lower Number of Matches
+
+We can specify the lower and upper number of patterns with quantity specifiers. 
+Quantity specifiers are used with curly brackets ({ and }). We put two numbers between the curly brackets - for the lower and upper number of patterns.
+For example, to match only the letter a appearing between 3 and 5 times in the string "ah", your regex would be /a{3,5}h/.
+
+`/a{n}/` denotes n a's and `/a{n,}/` denotes minimum n a's.
+
+## Check for all or none
+
+We can specify the possible existence of an element with a question mark, ?. This checks for zero or one of the preceding element.
+
+`/u?/` denotes 0 or 1 u's
+
+## Positive and Negative Lookahead
+
+Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. 
+This can be useful when we want to search for multiple patterns over the same string.
+There are two kinds of lookaheads: positive lookahead and negative lookahead.
+A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it. 
+A positive lookahead is used as `(?=...)` where the `...` is the required part that is not matched.
+On the other hand, a negative lookahead will look to make sure the element in the search pattern is not there. 
+A negative lookahead is used as `(?!...)` where the `...` is the pattern that you do not want to be there. 
+The rest of the pattern is returned if the negative lookahead part is not present.
+
+Question : Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, do not begin with numbers, and have two consecutive digits.
+```
+let sampleWord = "astronaut";
+let pwRegex = /^\D(?=\w{5})(?=\w*\d{2})/;
+let result = pwRegex.test(sampleWord);
+```
+
+## Check For Mixed Grouping of Characters
+
+Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses ().
+If we want to find either Penguin or Pumpkin in a string, we can use the following Regular Expression: /P(engu|umpk)in/g
+Then check whether the desired string groups are in the test string by using the test() method.
+
+```
+let testStr = "Pumpkin";
+let testRegex = /P(engu|umpk)in/;
+testRegex.test(testStr);
+```
+
+## Use Capture Groups to Search and Replace
+
+We can search and replace text in a string using `.replace()`  on a string. The inputs for `.replace()` is first the regex pattern we want to search for. 
+The second parameter is the string to replace the match or a function to do something.
+
+```
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+// Returns "The sky is blue."
+```
+
+We can also access capture groups in the replacement string with dollar signs ($).
+
+```
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+// Returns "Camp Code"
+```
+
+## Remove Whitespace from Start and End
+
+`String.prototype.trim()` works fine but we shall use regex here.
+
+```
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g;
+let result = hello.replace(wsRegex, ""); 
+console.log(result);
+```
 
 
+----
 
 
-
-
-
-
-
+# Debugging
