@@ -35,6 +35,17 @@ Undefined variables cant be used for operations. Variable names are case sensiti
 JavaScript variables undergoes mathematical operations like regular variables.
 We can use escape sequences or double quoted texts inside single quotes.
 
+## Input and Output
+
+`alert()` gives an alert prompt on the browser.
+`console.log()` gives the output on the developers console and 
+`document.Write()` gives output inside the webpage
+
+`document.getElementById("id").innerHTML=` to modify inner contents inside of HTML tags
+
+`prompt()` is used to get user input through prompt.
+`document.getElementById("id").value` to get values from form inputs.
+
 ## Strings
 
 Strings are treated as character array in JavaScript. `.length` is used to calculate the length of an array.
