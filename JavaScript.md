@@ -752,4 +752,8 @@ p.then(message=>{
 });
 ```
 
+`Promise.all()` and `Promise.race()`
+
 ## Callbacks
+
+callbacks are similar to promises
