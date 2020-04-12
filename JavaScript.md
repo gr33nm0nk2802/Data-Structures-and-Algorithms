@@ -768,3 +768,151 @@ p.then(message=>{
 ## Callbacks
 
 callbacks are similar to promises
+
+----
+
+# Regular Expression
+
+Regular expressions are special strings that represent a search pattern.
+Also known as "regex" or "regexp", they help programmers match, search, and replace text. 
+Regular expressions can appear cryptic because a few characters have special meaning. 
+The goal is to combine the symbols and text into a pattern that matches what you want, but only what you want. 
+This section will cover the characters, a few shortcuts, and the common uses for writing regular expressions.
+
+## Test method
+
+Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
+If you want to find the word "the" in the string "The dog chased the cat", you could use the following regular expression: /the/. 
+Notice that quote marks are not required within the regular expression.
+JavaScript has multiple ways to use regexes. One way to test a regex is using the .test() method. The .test() method takes the regex, 
+applies it to a string (which is placed inside the parentheses), and returns true or false if your pattern finds something or not.
+
+```
+let testStr = "freeCodeCamp";
+let testRegex = /Code/;
+testRegex.test(testStr);
+// Returns true
+```
+The test function matches the regex when the case matches.
+
+## Match multiple words
+
+We can search for multiple patterns using the alternation or OR operator: |.
+This operator matches patterns either before or after it. For example, if you wanted to match "yes" or "no", the regex you want is /yes|no/.
+You can also search for more than just two patterns. You can do this by adding more patterns with more OR operators separating them, like /yes|no|maybe/.
+
+```
+let petRegex = /dog|cat|bird|fish/; 
+```
+
+## Ignore Case While Matching
+
+There are other flags but here we'll focus on the flag that ignores case - the i flag. 
+We can use it by appending it to the regex. An example of using this flag is /ignorecase/i. 
+This regex can match the strings "ignorecase", "igNoreCase", and "IgnoreCase".
+
+`let fccRegex = /freecodecamp/i;`
+
+## Extract Matches
+
+We can also extract the actual matches you found with the `.match()` method.
+To use the `.match()` method, apply the method on a string and pass in the regex inside the parentheses. 
+Here's an example:
+
+```
+"Hello, World!".match(/Hello/);
+// Returns ["Hello"]
+let ourStr = "Regular expressions";
+let ourRegex = /expressions/;
+ourStr.match(ourRegex);
+// Returns ["expressions"]
+```
+
+It returns the regex, index and the input string.
+
+## More than one match
+
+To search or extract a pattern more than once, you can use the g flag.
+
+```
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+```
+
+## Match Anything with Wildcard Period
+
+The wildcard character . will match any one character. The wildcard is also called dot and period. 
+We can use the wildcard character just like any other character in the regex. 
+For example, if we wanted to match "hug", "huh", "hut", and "hum", you can use the regex /hu./ to match all four words.
+
+`let repeatRegex = /.un/`
+
+## Match Single Character with Multiple Possibilities
+
+We learned how to match literal patterns (/literal/) and wildcard character (/./). 
+Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. 
+There are options that are a balance between the two extremes.
+We can search for a literal pattern with some flexibility with `character classes`. 
+Character classes allow you to define a group of characters you wish to match by placing them inside square ([ and ]) brackets.
+For example, you want to match "bag", "big", and "bug" but not "bog". We can create the regex /b[aiu]g/ to do this. 
+The [aiu] is the character class that will only match the characters "a", "i", or "u".
+
+```
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/ig; // Change this line
+let result = quoteSample.match(vowelRegex); // Change this line
+console.log(result);
+```
+
+## Match Letters of the Alphabet
+
+We saw how we can use character sets to specify a group of characters to match, 
+but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). 
+Fortunately, there is a built-in feature that makes this short and simple.
+Inside a character set, we can define a range of characters to match using a hyphen character: -.
+For example, to match lowercase letters a through e you would use [a-e].
+
+```
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/ig; // Change this line
+let result = quoteSample.match(alphabetRegex); // Change this line
+console.log(result);
+```
+
+## Match Numbers and Letters of the Alphabet
+
+Using the hyphen (-) to match a range of characters is not limited to letters. It also works to match a range of numbers.
+For example, /[0-5]/ matches any number between 0 and 5, including the 0 and 5.
+Also, it is possible to combine a range of letters and numbers in a single character set.
+
+```
+let jennyStr = "Jenny8675309";
+let myRegex = /[a-z0-9]/ig;
+// matches all letters and numbers in jennyStr
+jennyStr.match(myRegex);
+```
+
+## Match Single Characters Not Specified
+
+So far, we have created a set of characters that we want to match, but we could also create a set of characters that we do not want to match. 
+These types of character sets are called negated character sets. To create a negated character set, 
+we place a caret character (^) after the opening bracket and before the characters we do not want to match.
+For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space are matched - 
+the negated vowel character set only excludes the vowel characters.
+
+```
+let quoteSample = "3 blind mice.";
+let myRegex = /[^0-9aeiou]/ig; 
+let result = quoteSample.match(myRegex); 
+console.log(result);
+```
+
+
+
+
+
+
+
+
+
+
