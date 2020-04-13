@@ -1072,3 +1072,86 @@ console.clear() to clear the console.
 
 ## Type of to check variable type
 console.log(typeof variable);
+
+# Data Structures
+
+## Array
+
+## Basic Insertion and deletion
+We can pop() push() shift() unshift() in an array.
+
+### .splice()
+`splice()` allows us to remove any number of consecutive elements from anywhere in an array.
+splice() can take up to 3 parameters, but for now, we'll focus on just the first 2. The first two parameters of splice() are integers which represent indexes, 
+or positions, of the array that splice() is being called upon. And remember, arrays are zero-indexed, so to indicate the first element of an array, 
+we would use 0. splice()'s first parameter represents the index on the array from which to begin removing elements, 
+while the second parameter indicates the number of elements to delete. 
+
+`splice()` can take up to three parameters. Well, we can use the third parameter, comprised of one or more element(s), to add to the array. 
+This can be incredibly useful for quickly switching out an element, or a set of elements, for another.
+
+```
+const numbers = [10, 11, 12, 12, 15];
+const startIndex = 3;
+const amountToDelete = 1;
+
+numbers.splice(startIndex, amountToDelete, 13, 14);
+// the second entry of 12 is removed, and we add 13 and 14 at the same index
+console.log(numbers);
+// returns [ 10, 11, 12, 13, 14, 15 ]
+```
+
+### .slice()
+`.slice()`, rather than modifying an array, copies, or extracts, a given number of elements to a new array, 
+leaving the array it is called upon untouched. `.slice()` takes only 2 parameters — the first is the index at which to begin extraction, 
+and the second is the index at which to stop extraction.
+
+### .indexOf()
+`.indexOf()` returns the index of an item if present in the array else returns -1.
+
+### every(), forEach(), map()
+
+
+### Access object key value pairs and change them.
+
+### iterating key inside an object
+
+```
+for (let user in usersObj) {
+    if (usersObj[user].online === true) {
+      result++;
+    }
+```
+
+### Generating and array of object keys
+
+We can also generate an array which contains all the keys stored in an object using the `Object.keys()` method and passing in an object as the argument. 
+This will return an array with strings representing each property in the object. Again, there will be no specific order to the entries in the array.
+
+```
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+    return Object.keys(obj);
+  }
+console.log(getArrayOfUsers(users));
+```
+
+### Updating an array inside of an object and then returning it.
