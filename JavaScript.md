@@ -1,7 +1,7 @@
 ----
 > Name  : Syed Modassir Ali
 > Date  : 30.03.2020
-> Title : Javascript
+> Title : Javascript (VanillaJS)
 ----
 
 # Introduction
@@ -305,9 +305,6 @@ Parameters are variables that act as placeholders for the values that are to be 
  
 Scope of variable is also important. Variables which are used without the var keyword are automatically created in the global scope. 
 Variables which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
-
-In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
-Queue. (LIFO)
 
 Boolean data types true / false.
 
@@ -1086,6 +1083,10 @@ console.log(typeof variable);
 ----
 # Data Structures
 
+In Computer Science a queue is an abstract Data Structure where items are kept in order. 
+New items can be added at the back of the queue and old items are taken off from the front of the queue.
+Queue. (LIFO)
+
 ## Array
 
 ## Basic Insertion and deletion
@@ -1122,8 +1123,20 @@ and the second is the index at which to stop extraction.
 
 ### every(), forEach(), map()
 
+```
+
+
+
+
+
+
+
+```
+
 
 ### Access object key value pairs and change them.
+
+This has been dealt under the objects and OOP section.
 
 ### iterating key inside an object
 
@@ -1167,15 +1180,12 @@ console.log(getArrayOfUsers(users));
 
 ### Updating an array inside of an object and then returning it.
 
-
-
-
-
-
-
-
-
-
+```
+function addFriend(userObj, friend) {
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
+}
+```
 
 ----
 ----
