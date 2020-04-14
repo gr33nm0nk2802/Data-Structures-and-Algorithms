@@ -46,10 +46,23 @@ We can use escape sequences or double quoted texts inside single quotes.
 `prompt()` is used to get user input through prompt.
 `document.getElementById("id").value` to get values from form inputs.
 
+## Boolean
+
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+use `arr.filter(Boolean);`  to remove them.
+
 ## Strings
 
 Strings are treated as character array in JavaScript. `.length` is used to calculate the length of an array.
 In JavaScript, String values are immutable, which means that they cannot be altered once created. 
+
+`.split("")`  splits the string based on the arguments passed.   `.reverse()` reverses the array.    `.join("")` joins the array back using the argument passed.
+
+`let a =Math.max(...str.split(" ").map(word => word.length));` to find the word in an array having maximum length.
+
+`.endsWith()` determines if a particular string ends with a particular substring.
+
 
 ## Arrays
 
@@ -966,6 +979,10 @@ We can search for the opposite of the \w with \W. Note, the opposite pattern use
 
 We can use \d to match all numbers in a regex. \D is used for non numbers.
 
+## Match with variables
+
+`let re = new RegExp(target + "$", "ig");`
+
 ## Username check
 
 `let userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;`
@@ -1155,3 +1172,39 @@ console.log(getArrayOfUsers(users));
 ```
 
 ### Updating an array inside of an object and then returning it.
+
+
+----
+----
+
+# Object Oriented Programming
+
+## Creating an Object
+
+```js
+let obj = {
+	key : value,
+	...
+	key : value
+};
+```
+
+## Creating a function inside an object
+
+```js
+let obj = {
+	objectfucntion(){
+		// body of the function	
+	}
+}
+```
+
+
+
+
+
+
+
+
+
+
