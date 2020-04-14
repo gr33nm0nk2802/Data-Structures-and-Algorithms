@@ -363,9 +363,6 @@ In order to help us create more flexible functions, ES6 introduces default param
 const increment = (number, value=1) => number + value;
 ```
 
-----
-
-
 ## Recursion
 
 ```
@@ -377,7 +374,6 @@ int fact(int n)
         return n*fact(n-1);    
 }
 ```
-
 ## Some Functions
 
 `Math.random();`     `Math.floor();`
@@ -389,26 +385,34 @@ Use `parseInt()` in the convertToInteger function so it converts the input strin
 
 `radix` accepts values between 2 to 36.
 
------
------
+## Functional Programming
 
+We will review this section later.
+
+
+-----
+-----
 
 # ES6
 
-ECMAScript is a standardized version of JavaScript with the goal of unifying the language's specifications and features. As all major browsers and JavaScript-runtimes follow this specification, the term ECMAScript is interchangeable with the term JavaScript.
+ECMAScript is a standardized version of JavaScript with the goal of unifying the language's specifications and features. 
+As all major browsers and JavaScript-runtimes follow this specification, the term ECMAScript is interchangeable with the term JavaScript.
 
-
-----
+## Variable declaration
 
 `let` keyword helps us create a vraibale within the local scope and also helps us avoid multiple variable declaration.
 
-`const` has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.
+`const` has all the awesome features that let has, with the added bonus that variables declared using const are read-only. 
+They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.
 
-Common convention is to name const variables with ALL CAPS.
+**Common convention is to name const variables with ALL CAPS.**
+**Constructors are named with their names starting in uppercase.**
 
-objects (including arrays and functions) assigned to a variable using const are still mutable.
 
-To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.Once the object is frozen, you can no longer add, update, or delete properties from it. Any attempt at changing the object will be rejected without an error.
+### Mutation
+Objects (including arrays and functions) assigned to a variable using const are still mutable.
+To ensure your data doesn't change, JavaScript provides a function `Object.freeze` to prevent data mutation.
+Once the object is frozen, you can no longer add, update, or delete properties from it. Any attempt at changing the object will be rejected without an error.
 
 
 ## Arrow Function 
@@ -451,6 +455,8 @@ However, the spread operator only works in-place, like in an argument to a funct
 
 ## Destructuring Assignment
 
+### Basics
+
 Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
 
 The following ES5 code 
@@ -470,11 +476,16 @@ const { name, age } = user;
 
 Here, the name and age variables will be created and assigned the values of their respective values from the user object.
 
+### Assigning new variables using Destructuring
+
 Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
 Here's how you can give new variable names in the assignment:
 ```
 const { name: userName, age: userAge } = user;
 ```
+
+### Nested Objects
+
 We can use the same principles to destructure values from a nested objects.
 
 Example
@@ -491,7 +502,7 @@ const user = {
 const { johnDoe: { age: userAge, email: userEmail }} = user;
 ```
 
-Assign variables from array.
+### Assign variables from array
 
 ES6 makes destructuring arrays as easy as destructuring objects.
 
@@ -515,12 +526,13 @@ let a = 8, b = 6;
  [b,a] =[a,b];
 ```
 
-`Array.prototype.slice()` 
+`Array.prototype.slice()`
+ 
 
-* Using destructuring assignment with the rest parameter to perform an effective `Array.prototype.slice()` so that arr is a sub-array of the original array source with the first two elements omitted.
+**Using destructuring assignment with the rest parameter to perform an effective `Array.prototype.slice()` so that arr is a sub-array of the original array source with the first two elements omitted.**
 
 
-* In some cases, you can destructure the object in a function argument itself.
+### Destructure the object in a function argument itself.
 
 ```
 const profileUpdate = (profileData) => {
@@ -536,7 +548,8 @@ const profileUpdate = ({ name, age, nationality, location }) => {
 }
 ```
 
-This removes some extra lines and makes our code look neat. This has the added benefit of not having to manipulate an entire object in a function — only the fields that are needed are copied inside the function.
+This removes some extra lines and makes our code look neat. This has the added benefit of not having to manipulate an entire object in a function —
+ only the fields that are needed are copied inside the function.
 
 It also helps during API calls.
 
@@ -605,34 +618,9 @@ const person = {
 };
 ```
 
-## Constructor and Object creation
+## Constructors and Object Creation
 
-* Use class Syntax to Define a Constructor Function
-
-ES6 provides a new syntax to create objects, using the class keyword.
-
-It should be noted that the class syntax is just syntax, and not a full-fledged class-based implementation of an object-oriented paradigm, unlike in languages such as Java, Python, Ruby, etc.
-
-In ES5, we usually define a constructor function and use the new keyword to instantiate an object.
-
-```
-var SpaceShuttle = function(targetPlanet){
-  this.targetPlanet = targetPlanet;
-}
-var zeus = new SpaceShuttle('Jupiter');
-```
-
-The class syntax simply replaces the constructor function creation:
-
-```
-class SpaceShuttle {
-  constructor(targetPlanet) {
-    this.targetPlanet = targetPlanet;
-  }
-}
-const zeus = new SpaceShuttle('Jupiter');
-```
-It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
+We will see this in the Object Oriented Programming section. Just creation Syntax here.
 
 ## Getters and Setters
 
@@ -640,7 +628,8 @@ Use getters and setters to Control Access to an Objects private data.
 We can obtain values from an object and set the value of a property within an object using the getters and setters.
 Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
 
-Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
+Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. 
+This change could involve calculations, or even overwriting the previous value completely.
 
 ```
 class Book {
@@ -662,11 +651,13 @@ lol.writer = 'wut';
 console.log(lol.writer);  // wut
 ```
 
-Notice the syntax used to invoke the getter and setter. They do not even look like functions. Getters and setters are important because they hide internal implementation details. Note: It is convention to precede the name of a private variable with an underscore (_). 
+**Notice the syntax used to invoke the getter and setter. They do not even look like functions. Getters and setters are important because they hide internal implementation details. Note: It is convention to precede the name of a private variable with an underscore (_).**
 
 ## Modules, Import and Export
 
-In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a type of module.
+In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. 
+This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. 
+In order to take advantage of this functionality, we need to create a script in your HTML document with a type of module.
 
 `<script type="module" src="index.js"></script>`
 
@@ -981,6 +972,7 @@ We can use \d to match all numbers in a regex. \D is used for non numbers.
 
 ## Match with variables
 
+We can use a constructor to create a re using a variable each time the variable is modified.
 `let re = new RegExp(target + "$", "ig");`
 
 ## Username check
@@ -1090,6 +1082,8 @@ console.clear() to clear the console.
 ## Type of to check variable type
 console.log(typeof variable);
 
+----
+----
 # Data Structures
 
 ## Array
@@ -1174,6 +1168,15 @@ console.log(getArrayOfUsers(users));
 ### Updating an array inside of an object and then returning it.
 
 
+
+
+
+
+
+
+
+
+
 ----
 ----
 
@@ -1201,9 +1204,11 @@ let obj = {
 
 ## Using dot notation to access object properties
 
+A property such as `eat` under `Animals` object can be accessed as `Animals.eat`
+
 ## Make code reusable using the this keyword
 
-this keyword is used to access the objects property already created.
+`this` keyword is used to access the objects property already created.
 
 ## Using constructor to create new objects
 
@@ -1220,6 +1225,35 @@ let newOBject = new Object();
 ```
 the new operator is used when calling a constructor. This tells JavaScript to create a new instance of Object called newObject. 
 Without the new operator, this inside the constructor would not point to the newly created object, giving unexpected results.
+
+## Constructor and Object creation
+
+**Use class Syntax to Define a Constructor Function**
+
+ES6 provides a new syntax to create objects, using the class keyword.
+
+It should be noted that the class syntax is just syntax, and not a full-fledged class-based implementation of an object-oriented paradigm, unlike in languages such as Java, Python, Ruby, etc.
+
+In ES5, we usually define a constructor function and use the new keyword to instantiate an object.
+
+```
+var SpaceShuttle = function(targetPlanet){
+  this.targetPlanet = targetPlanet;
+}
+var zeus = new SpaceShuttle('Jupiter');
+```
+
+The class syntax simply replaces the constructor function creation:
+
+```
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+const zeus = new SpaceShuttle('Jupiter');
+```
+It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
 
 ## Verify an Object's Constructor with instanceof
 
@@ -1295,6 +1329,9 @@ Just like people inherit genes from their parents, an object inherits its protot
 ## Understanding the prototype chain
 
 `Object.prototype.isPrototypeOf(Dog.prototype);`
+
+
+
 
 
 
@@ -1540,6 +1577,8 @@ let funModule = (function(){
 })();
 ```
 
+----
+----
 
 # Functional Programming
 
