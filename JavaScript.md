@@ -656,7 +656,8 @@ In order to make JavaScript more modular, clean, and maintainable; ES6 introduce
 This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. 
 In order to take advantage of this functionality, we need to create a script in your HTML document with a type of module.
 
-`<script type="module" src="index.js"></script>`
+`<script type="module" src="index.js"></script>`  index.js file will import the features 
+
 
 A script that uses this module type can now use the import and export features.
 ```
@@ -681,6 +682,8 @@ default export
 
 default import
 ` import add from "./maths_function.js"`
+
+default imports can be named anything
 
 import all
 `import * as somefunction from "./maths_function.js"`
