@@ -373,7 +373,7 @@ int fact(int n)
 ```
 ## Some Functions
 
-`Math.random();`     `Math.floor();`
+`Math.random();`     `Math.floor();`  `Number.isInteger()`
 `Math.floor(Math.random() * (max - min + 1)) + min`
 
 Use `parseInt()` in the convertToInteger function so it converts the input string str into an integer, and returns it.
