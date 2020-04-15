@@ -1636,7 +1636,7 @@ A common pattern in JavaScript is to execute a function as soon as it is declare
 ```
 (function () {
   console.log("Chirp, chirp!");
-})();
+}());
 ```
 Note that the function has no name and is not stored in a variable. 
 The two parentheses () at the end of the function expression cause it to be immediately executed or invoked. 
@@ -1646,6 +1646,17 @@ It helps achieve 2 goals: 1. prevents global variable poisioning 2. initialize o
 ## Use an IIFE to Create a Module
 
 An immediately invoked function expression (IIFE) is often used to group related functionality into a single object or module. 
+
+```
+var iife = (function(){
+
+	// private data members
+	return{
+		// public functions
+	}
+}());
+```
+
 
 ```
 function glideMixin(obj) {
@@ -1674,7 +1685,7 @@ let motionModule = (function () {
       };
     }
   }
-})(); // The two parentheses cause the function to be immediately invoked
+}()); // The two parentheses cause the function to be immediately invoked
 ```
 
 Note that we have an immediately invoked function expression (IIFE) that returns an object motionModule. 
@@ -1702,7 +1713,7 @@ let funModule = (function(){
   };
 }
   }
-})();
+}());
 ```
 
 ----
