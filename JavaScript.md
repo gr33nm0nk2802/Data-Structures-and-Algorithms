@@ -1172,6 +1172,8 @@ Queue. (LIFO)
 ## Basic Insertion and deletion
 We can pop() push() shift() unshift() in an array.
 
+## Higher order Array Functions
+
 ### .splice()
 `splice()` allows us to remove any number of consecutive elements from anywhere in an array.
 splice() can take up to 3 parameters, but for now, we'll focus on just the first 2. The first two parameters of splice() are integers which represent indexes, 
@@ -1201,18 +1203,36 @@ and the second is the index at which to stop extraction.
 ### .indexOf()
 `.indexOf()` returns the index of an item if present in the array else returns -1.
 
-### every(), forEach(), map()
+### every()
 
-```
+`array.every(condition)` returns true if every item present in an array satisfies the given condition.
 
+### some()
 
+`array.some(condition)` returns true or false for an item present in the array
 
+### forEach
 
+`array.forEach(function(parameter in the array){ condition });` checks the condition for each item in the array.
 
+### filter
 
+Return filtered items from an array.
+`array.filter(function(array){ condition? true : false })`
 
-```
+### map
 
+Create array of items from array passed based on condition.
+`array.map(array=> condition? return a : return b ; )`
+
+### sort
+
+`array.sort((a,b)=> a - b;)` return 1 or -1
+
+### reduce
+
+To add all the items
+`array.reduce((total,array)=> total+age , 0)` reduces the array to a single value.
 
 ### Access object key value pairs and change them.
 
