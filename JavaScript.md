@@ -1618,10 +1618,16 @@ The flyMixin takes any object and gives it the fly method.
 
 ## Use Closure to Protect Properties Within an Object from Being Modified Externally
 
+In JavaScript variables declared outside are automatically available within the function. JS uses lexical scoping i.e inner function variables are not accessible outside but outer variables can be accessed inside.
+```
+var addTo = function(passed){
+	var add = function(inner){
+		return passed+inner;
+	};
+	return add;
+};
 
-
-
-
+```
 
 ## Understand the Immediately Invoked Function Expression (IIFE)
 
