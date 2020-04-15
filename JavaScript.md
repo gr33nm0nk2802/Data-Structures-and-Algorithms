@@ -1078,6 +1078,86 @@ console.clear() to clear the console.
 
 ## Type of to check variable type
 console.log(typeof variable);
+----
+----
+
+# DOM Manipulation 
+
+## Selecting and Changing website elements.
+
+`document.getElementByID()` to select elements of a particular ID. 
+`document.getElementsByClassName()`  to select elemnets of particular classes.
+`div1.getElementsByClassName()`  to select elements of a particular class inside div1 container.
+`document.getElementByTagName()` to select elements based on HTML tags.
+`document.querySelector()` to find the first element with this query
+`document.querySelectorAll()` to find and select all queries.
+`.innerHTML` to change inner contents of a HTML.  // This can create a XSS attack
+`.textContent` to parse inner contents as text rather than HTML.
+
+## Setting and Getting Css Styles.
+
+`.style.color` to change the text color
+`.style.background` to change the background color
+`.style.boxShadow` to change the box shadow property.
+`.style.cssText` to set multiple styles.
+`.setAttribute()` to put multiple styles. // both cssText and setAttributes overrides the inline styling.
+`window.getComputedStyle()` to show all styles pre-computed.
+
+## Events
+
+`.onclick` when an element is clicked
+`.oninput` when an input is provided
+`.onload` when page is loaded
+`.onmouseover` when mouse is over an element
+`.onmouseout` when mouse is over an element and moves out.
+`resize`
+
+## Event Listner
+
+`element.addEventListener(event, function, useCapture)`
+`element.removeEventListner(event, function, useCapture)` //Parameters must be same
+
+## Nodes
+
+`.appendChild()`
+`.replaceChild()`
+`.removeChild()`
+
+## Animation in DOM
+
+`element.animate(keyframes as objects array, options as object)`
+
+## Request Animation Frame
+
+`window.requestAnimationFrame()` //gives a stop id. used with callbacks generally
+`cancelAnimationFrame(stopId)`
+
+## Window Objects
+
+This represents the browser window. 
+`.innerWidth` `.innerHeight`
+`.open()` `.close()` `.moveBy()` `.moveTo()` `.focus()`
+
+## Pop up Boxes
+
+`alert()` `confirm("Message")` `prompt("Message", default value)`
+
+## Cookies, local and session storage
+
+Cookies store 4kb data. Local Storage 10mb and Session Storage 5mb. Session storage are accessible from the same tab that was used to create it.
+Cookies are stored on browser and server and sent to the server with request.
+
+`localStorage.setItem(key,value)` `sessionStorage.setItem(key,value)`
+`.removeItem()` `.clear()`   `document.cookie = "key=value; expires=date-time";path=/;` path here signifies the path to which the cookie is associated.
+
+To delete a cookie set the cookie to have an expired expiration date(01 Jan 1970 00:00:00 UTC;) but same path and value as blank.
+
+## History
+
+`.history` `window.history.length` `history.back()` `history.forward()` `history.go(n)` 
+`history.replaceState(Json object, name, website)` `history.state` `history.pushState(state or json object, name, url )`
+
+`turn_off_js=true;`
 
 ----
 ----
