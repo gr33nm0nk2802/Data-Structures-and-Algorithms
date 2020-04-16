@@ -1326,17 +1326,17 @@ let obj = {
 
 ## Using dot notation to access object properties
 
-A property such as `eat` under `Animals` object can be accessed as `Animals.eat`
+A property such as `eat` under `Animals` object can be accessed as `Animals.eat` or a method can be accessed as `Animal.play()`
 
 ## Make code reusable using the this keyword
 
-`this` keyword is used to access the objects property already created.
+`this` keyword is used to access the objects property already created. 
 
 ## Using constructor to create new objects
 
 Constructors are functions that create new objects. They define properties and behaviors that will belong to the new object. 
 
-```
+```js
 function Object() {
   this.key1 = value1;
   this.key2 = value2;
@@ -1345,12 +1345,18 @@ function Object() {
 
 let newOBject = new Object();
 ```
-the new operator is used when calling a constructor. This tells JavaScript to create a new instance of Object called newObject. 
-Without the new operator, this inside the constructor would not point to the newly created object, giving unexpected results.
+The new operator is used when calling a constructor. This tells JavaScript to create a new instance of Object called newObject. 
+We can create multiple instances of an object. Without the new operator, this inside the constructor would not point to the newly created object, giving unexpected results.
+
+## Verify an Object's Constructor with instanceof
+
+Anytime a constructor function creates a new object, that object is said to be an instance of its constructor. 
+JavaScript gives a convenient way to verify this with the `instanceof` operator. 
+`instanceof` allows us to compare an object to a constructor, returning true or false based on whether or not that object was created with the constructor.
 
 ## Constructor and Object creation
 
-**Use class Syntax to Define a Constructor Function**
+**Use class Syntax to Define a Constructor Function (Syntactic-sugar)**
 
 ES6 provides a new syntax to create objects, using the class keyword.
 
@@ -1377,15 +1383,9 @@ const zeus = new SpaceShuttle('Jupiter');
 ```
 It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
 
-## Verify an Object's Constructor with instanceof
-
-Anytime a constructor function creates a new object, that object is said to be an instance of its constructor. 
-JavaScript gives a convenient way to verify this with the `instanceof` operator. 
-`instanceof` allows us to compare an object to a constructor, returning true or false based on whether or not that object was created with the constructor.
-
 ## Check if an object has a particular property
 
-`.hasOwnProperty()`
+`.hasOwnProperty()` is used to check if an object has a particular property returns boolean value.
 
 ## Use Prototype Properties to Reduce Duplicate Code
 
@@ -1394,6 +1394,8 @@ JavaScript gives a convenient way to verify this with the `instanceof` operator.
 ## Understand the Constructor Property
 
 `constructor` property is a reference to the constructor function that created the instance
+
+`duck.prototype.constructor=Bird`
 
 ## Change the Prototype to a New Object
 
@@ -1452,12 +1454,7 @@ Just like people inherit genes from their parents, an object inherits its protot
 
 `Object.prototype.isPrototypeOf(Dog.prototype);`
 
-
-
-
-
-
-
+Object.prototype is on top of the inheritance chain and all other objects inherit from Object.prototype such as Bird.prototype, Array.prototype
 
 
 ## Use Inheritance So You Don't Repeat Yourself(DRY)
