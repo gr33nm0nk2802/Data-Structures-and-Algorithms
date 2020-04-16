@@ -688,6 +688,9 @@ default imports can be named anything
 import all
 `import * as somefunction from "./maths_function.js"`
 
+## Asynchronous Data 
+**⬇️⬇️⬇️**
+
 ## Promise
 
 A promise in JavaScript is exactly what it sounds like - you use it to make a promise to do something, usually asynchronously. 
