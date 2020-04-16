@@ -1304,6 +1304,18 @@ The object structure makes it flexible within a program. Objects can transfer in
 
 Your choice of programming approach depends on a few factors. These include the type of problem, as well as how you want to structure your data and algorithms.
 
+## Main Concepts
+
+Any object has property(data) and method(function). OOP utilizes 4 core principles:
+
+- Encapsulation : Grouping of same property and method into a single object. It reduces code complexity and increases code reuseability.
+
+- Abstraction : It is the act of hiding the inner deatails of the code unless required. It isolates the impact of change and reduces complexity.
+
+- Inheritance : Eliminates redundant code by inheriting the properties of the parent object.
+
+- Polymorphism : Refactoring ugly switch case and if-else statements  as we render different elements differently with the same method. i.e the same method can be used for different objects to behave in different ways.
+
 ## Creating an Object
 
 ```js
