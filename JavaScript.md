@@ -770,9 +770,16 @@ p.then(message=>{
 `Promise.all()` and `Promise.race()`
 
 ## Callbacks
+```
+// This section is left
+// callbacks are similar to promises
+```
 
-callbacks are similar to promises
-
+## Async/Await
+```
+// This section is left
+```
+----
 ----
 
 # Regular Expression
@@ -1608,6 +1615,11 @@ If you have an instance let duck = new Bird(); and you call duck.eat(), this is 
    - Bird => Is eat() defined here? => Yes. Execute it and stop searching.
    - Animal => eat() is also defined, but JavaScript stopped searching before reaching this level.
    - Object => JavaScript stopped searching before reaching this level.
+
+## Subclasses
+```
+// This section is left off
+```
 
 ## Use a Mixin to Add Common Behavior Between Unrelated Objects
 
