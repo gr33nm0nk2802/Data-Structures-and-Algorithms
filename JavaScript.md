@@ -1742,9 +1742,100 @@ let funModule = (function(){
 
 # Functional Programming
 
+## Introduction
+Introduction to the Functional Programming Challenges
+
+Functional programming is an approach to software development based around the evaluation of functions. Like mathematics, functions in programming map input to output to produce a result. You can combine basic functions in many ways to build more and more complex programs.
+
+Functional programming follows a few core principles:
+
+  -  Functions are independent from the state of the program or global variables. They only depend on the arguments passed into them to make a calculation
+  -  Functions try to limit any changes to the state of the program and avoid changes to the global objects holding data
+  -  Functions have minimal side effects in the program
+
+The functional programming software development approach breaks a program into small, testable parts.
 
 
+## Understand Functional Programming
 
+Functional programming is about:
 
+1) Isolated functions - there is no dependence on the state of the program, which includes global variables that are subject to change
 
+2) Pure functions - the same input always gives the same output
 
+3) Functions with limited side effects - any changes, or mutations, to the state of the program outside the function are carefully controlled.
+
+## Functional Programming Terminology
+
+Callbacks are the functions that are slipped or passed into another function to decide the invocation of that function. 
+You may have seen them passed to other methods, for example in filter, the callback function tells JavaScript the criteria for how to filter an array.
+
+Functions that can be assigned to a variable, passed into another function, or returned from another function just like any other normal value, 
+are called first class functions. In JavaScript, all functions are first class functions.
+
+The functions that take a function as an argument, or return a function as a return value are called higher order functions.
+
+When the functions are passed in to another function or returned from another function, then those functions which gets passed in or returned can be called a lambda.
+
+## Refactor Global Variables Out of Functions
+
+Two distinct principles for functional programming:
+
+1) Don't alter a variable or object - create new variables and objects and return them if need be from a function.
+
+2) Declare function arguments - any computation inside a function depends only on the arguments, and not on any global object or variable.
+
+## Operations 
+
+We can spread an array inside a new array to push an element into an array, we may also remove an item from an array using the filter property.
+
+Functions are considered first class objects in JavaScript, which means they can be used like any other object. 
+They can be saved in variables, stored in an object, or passed as function arguments.
+
+`.slice()` `.splice()` `.concat()` `.reduce()` `parseFloat()` `.split()` `.join()` `.replace()` `.trim()`
+
+## Currying and Partial
+
+The arity of a function is the number of arguments it requires. Currying a function means to convert a function of N arity into N functions of arity 1.
+In other words, it restructures a function so it takes one argument, then returns another function that takes the next argument, and so on.
+
+```js
+//Un-curried function
+function unCurried(x, y) {
+  return x + y;
+}
+
+//Curried function
+function curried(x) {
+  return function(y) {
+    return x + y;
+  }
+}
+//Alternative using ES6
+const curried = x => y => x + y
+
+curried(1)(2) // Returns 3
+```
+
+This is useful in your program if you can't supply all the arguments to a function at one time. 
+You can save each function call into a variable, which will hold the returned function reference that takes the next argument when it's available.
+
+```js
+// Call a curried function in parts:
+var funcForY = curried(1);
+console.log(funcForY(2)); // Prints 3
+```
+
+Similarly, partial application can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments.
+
+```js
+//Impartial function
+function impartial(x, y, z) {
+  return x + y + z;
+}
+var partialFn = impartial.bind(this, 1, 2);
+partialFn(10); // Returns 13
+```
+----
+----
