@@ -108,4 +108,46 @@ print_r($variable);
 ```
 ## Multidimensional array
 
-This is achieved by using array(array(),array(),array())
+This is achieved by using array(array(),array(),array());
+
+# Loops
+
+## While loop and do-While loop
+
+```
+while(condition){
+	// body of loop
+}
+```
+and 
+
+```
+do{
+	//body of loop
+}while(condition);
+```
+
+## for loop
+
+```
+for(init;condition;increment){
+	//body of the loop
+}
+```
+## foreach loop
+
+```
+foreach($array as $item){
+	//body of loop
+}
+```
+
+# Switch Case
+
+```
+switch($variable){
+	case 1:
+	break;
+	default:
+}
+```
