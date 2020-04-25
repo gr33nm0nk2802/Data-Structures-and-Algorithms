@@ -106,4 +106,6 @@ key position starts at 0.
 $variable = array(key1 => value, key2 =>value);
 print_r($variable);
 ```
+## Multidimensional array
 
+This is achieved by using array(array(),array(),array())
