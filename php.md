@@ -156,11 +156,12 @@ switch($variable){
 
 # GET
 
-```
 inside get.php
+```
 $_GET["stu_name"];
 ```
 
+inside another html
 ```
 <form action="get.php" type="get">
 	<input type="text" name="stu_name">
@@ -168,3 +169,19 @@ $_GET["stu_name"];
 ```
 
 `isset()` is used to check if a given variable set or not.
+
+# POST
+
+```
+$_POST["username"];
+$_POST["password"];
+```
+
+inside of html
+```
+
+<form action="post.php" type="post">
+	<input type="text" name="username">
+	<input type="password" name="password">
+</form>
+```
