@@ -212,3 +212,12 @@ and
 # Global Variable
 
 `global $variable-name;`
+
+---
+
+# Include and Require
+
+This enables us to use the same template in different php files.
+`include 'name_of_header.php' `  use relative path inside the quotes. It lets the code on the page to execute.
+
+`require 'header.php'` works the same as include function. It doesnot let the code on the page to execute. 
