@@ -200,6 +200,15 @@ invoking `Function_name(arg1,arg2);`
 
 # Date and Time Function
 
+`$date = date('d/m/y');` or 
+`$date = date('d.m.y');` or 
+`$date = date('d-m-y');`
+ 
+and
 
+`$time = date('H-i-s')` or
+`$time = date('H:i:s')`
 
+# Global Variable
 
+`global $variable-name;`
