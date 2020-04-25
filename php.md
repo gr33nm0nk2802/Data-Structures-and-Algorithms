@@ -185,3 +185,21 @@ inside of html
 	<input type="password" name="password">
 </form>
 ```
+
+# Functions
+
+```
+function Function_name($param1,$param2){
+	// body of the function
+ 	return $result
+}
+```
+invoking `Function_name(arg1,arg2);`
+
+---
+
+# Date and Time Function
+
+
+
+
