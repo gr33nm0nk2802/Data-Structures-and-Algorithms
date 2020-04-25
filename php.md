@@ -36,3 +36,57 @@ Adding Comments in PHP is very easy as it supports C++ and Java style comments a
 /* C style comment */
 ```
 ---
+
+# Variables
+
+Variables begin with a $ sign and are case sensitive. Scope of a variable is important. Data type is dynamic.
+
+Certain variables like Form variable ($_GET,$_POST) and server variables ($_SERVER) are reserved
+
+Conactenation of stings is done using the period sign '.'
+
+Escape sequences are used with \" \' etc.
+
+---
+
+# Conditionals
+
+Conditional statements are similar to that in c++
+
+Comparision and Logical operators are same.
+
+```
+$a == $b
+$a === $b
+$a != $b
+$a <> $b
+$a !== $b
+$a <  $b
+$a > $b
+$a <= $b
+$a >= $b
+
+```
+
+```
+$a && $b or $a and $b
+$a || $b or $a or $b
+$a xor $b
+!$a 
+```
+
+Syntax for conditional statements
+```
+if(condition)
+{
+	// body
+}
+else if (condition)
+{
+	//body
+}
+else
+{
+	//body
+}
+```
