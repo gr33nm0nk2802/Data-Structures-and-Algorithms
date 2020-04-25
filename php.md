@@ -90,3 +90,20 @@ else
 	//body
 }
 ```
+---
+
+# Arrays
+
+```
+$variable = array('Mike','Jhon','Bob');
+print_r($variable);
+```
+key position starts at 0.
+
+## Associative array
+
+```
+$variable = array(key1 => value, key2 =>value);
+print_r($variable);
+```
+
