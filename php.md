@@ -148,6 +148,8 @@ foreach($array as $item){
 switch($variable){
 	case 1:
 	break;
+	...
+	case N:
 	default:
 }
 ```
