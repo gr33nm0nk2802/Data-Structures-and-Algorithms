@@ -153,3 +153,18 @@ switch($variable){
 	default:
 }
 ```
+
+# GET
+
+```
+inside get.php
+$_GET["stu_name"];
+```
+
+```
+<form action="get.php" type="get">
+	<input type="text" name="stu_name">
+</form>
+```
+
+`isset()` is used to check if a given variable set or not.
