@@ -177,3 +177,9 @@ while($query_execute=mysql_fetch_assoc($is_query_run)){
 }
 }
 ```
+
+### Md5 encryption
+
+```
+md5($password);
+```
