@@ -238,3 +238,38 @@ This enables us to use the same template in different php files.
 fopen($website,'r') or exit();
 ```
 A sessuib is a way to store informatin (in the form of variables) to be used across multiple pages. A PHP session variable is used to store information about, or change settings for a user session. Session variables hold information about one single user, and are available to all pages in the application.
+
+Set the session.
+```
+session_start();
+$_SESSION['key']=value;
+```
+To call a  session just call the session.
+```
+session_start();
+$variable = $_SESSION['key']; 
+```
+Unset the session
+```
+session_start();
+unset($_SESSION['key']); // To destroy a single session variable.
+session_destroy(); // To destroy all of the session.
+```
+
+# Cookies
+
+A cookie is used to identify a user. A cookie is a small file that the server embeds on the user's computer. Each time the same computer requests a page with the browser, it sends the cookie too.
+
+```
+//setting the cookie
+//setcookie(name,value,expiry,path,domain);
+//setcookie(name,value,expiry);
+$time = time(); // returns a timestamp EPOCH time 1970.
+$expire = $time + 100;
+setcookie('student','Mark',$expire);
+```
+
+Using the cookie
+```
+$student = $_COOKIE['student'];
+```
