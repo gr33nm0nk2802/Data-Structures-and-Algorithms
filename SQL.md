@@ -127,3 +127,40 @@ Removing testuser
 ```
 DROP USER 'testuser'@'localhost';
 ```
+
+# Connecting to the database
+
+Inside connect.php
+
+```
+$mysql_host = 'localhost'; // 127.0.0.1
+$mysql_user = 'root';
+$mysql_pass = 'password';
+
+mysqli_connect($mysql_host,$mysql_user,$mysql_pass); // returns boolean
+```
+To show custom warnings
+```
+@mysqli_connect($mysql_host,$mysql_user,$mysql_pass); or die('Cannot Connect');
+```
+
+Connect to the db
+```
+@mysqli_select_db(mysqli_connect($mysql_host,$mysql_user,$mysql_pass),'database_name'); 
+```
+
+Complete Connection Code
+```
+if(!@mysqli_connect($mysql_host,$mysql_user,$mysql_pass)){
+    die("Connection Unsuccessful");
+}
+else{
+    if(@mysqli_select_db(mysqli_connect($mysql_host,$mysql_user,$mysql_pass),'database_name')){
+        echo("Connection Success");
+    }
+    else{
+        echo("Cannot connect to the database");
+    }
+}
+```
+
