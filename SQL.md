@@ -1,8 +1,8 @@
----
+----
 > Name: Syed Modassir Ali
 > Date: 26.04.2020
 > Title: Sql 
----
+----
 
 # On Kali Linux (Access the MariaDb)
 
