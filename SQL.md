@@ -6,7 +6,7 @@
 
 # On Kali Linux (Access the MariaDb)
 
-Starting SQL and creating table to insert data into the columns
+### Starting SQL and creating table to insert data into the columns
 ```
 service mysql start
 mysql -u root -p
@@ -28,26 +28,68 @@ show tables;
 show columns from employee; 
 select * from employee
 ```
-Password change
+
+### Creating a user
+```
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'user_password';
+```
+
+### To view the users
+```
+SELECT User,Host FROM mysql.user;
+```
+
+### Password change
 ```
 UPDATE user SET Password=PASSWORD('new password') Where User='root'; FLUSH PRIVILEDGES;
 ```
 
-Delete a database
+### Delete a database
 ```
 DROP DATABASE database_name;
 ```
 
-Inserting data
+### Inserting data
 ```
 insert into table_name value("Value1","Value 2",..);
 ```
-To display the data inside the table
+
+### To display the data inside the table
 ```
+describe table_name;
 select * from table_name;
 ```
 
-To export the data in a table as .csv
+### To export the data in a table as .csv
 ```
 mysql -u root -p -e 'select * from databasename.table_name' | sed 's/\t/,/g' > filename.csv
 ```
+### Backing up databases
+
+- Single Database
+```
+mysqldump database_name > database_name.sql
+```
+
+- Multiple Databases
+```
+mysqldump --databases database_one database_two > two_databases.sql
+```
+
+- All Databases
+```
+mysqldump --all-databases > all_databases.sql
+```
+
+- Restoring Single
+```
+mysql database_name < database_name.sql
+```
+
+- Restore single from all backup 
+```
+mysql --one-database database_name < all_databases.sql
+```
+
+
+
