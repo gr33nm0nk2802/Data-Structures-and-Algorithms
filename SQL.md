@@ -128,7 +128,7 @@ Removing testuser
 DROP USER 'testuser'@'localhost';
 ```
 
-# Connecting to the database
+### Connecting to the database
 
 Inside connect.php
 
@@ -164,3 +164,16 @@ else{
 }
 ```
 
+### Getting Data
+
+```
+require 'connect.php';
+$query ="select * from table";
+if($is_query_run = mysql_query($query)){
+
+while($query_execute=mysql_fetch_assoc($is_query_run)){
+
+    echo $query_execute['key'];
+}
+}
+```
