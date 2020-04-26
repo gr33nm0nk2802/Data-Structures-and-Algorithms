@@ -221,3 +221,20 @@ This enables us to use the same template in different php files.
 `include 'name_of_header.php' `  use relative path inside the quotes. It lets the code on the page to execute.
 
 `require 'header.php'` works the same as include function. It doesnot let the code on the page to execute. 
+
+# Include_once and Require_once
+
+`include_once('header file')` or `require_once('header file')` this loads the header file only once and prevents repetition.
+
+---
+
+# Php Session
+
+`die("The pade is dead")` or `exit("The page is broken")` To kill a page.
+
+`fopen(link,directive)` to open a file or a url
+
+```
+fopen($website,'r') or exit();
+```
+A sessuib is a way to store informatin (in the form of variables) to be used across multiple pages. A PHP session variable is used to store information about, or change settings for a user session. Session variables hold information about one single user, and are available to all pages in the application.
