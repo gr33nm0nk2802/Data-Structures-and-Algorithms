@@ -125,7 +125,7 @@ object.property = new value;
 
 Adding
 ```
-object.newroperty = value;
+object.newproperty = value;
 ```
 
 Deleting
